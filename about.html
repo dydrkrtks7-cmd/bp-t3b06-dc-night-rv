@@ -1,344 +1,84 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <meta name="description" content="등촌 유흥 후기 정보 – 오피, 룸, 셔츠룸 등 지역별 유흥업소 상세 정보. 진짜 하는 말, 가짜 정보 걸러내는 법까지 다 까발린다. 등촌에서 놀려면 이거 보고 가라.">
-    <meta name="keywords" content="등촌,유흥,정보,등촌유흥,등촌오피,등촌룸,등촌셔츠룸,등촌유흥정보,유흥업소,등촌유흥후기">
-    <link rel="canonical" href="https://t3b06-dc-night-rv.vercel.app/info">
-    <title>등촌 유흥 후기 – 정보: 오피 룸 셔츠룸 완벽 가이드</title>
-
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "등촌 유흥 후기 정보",
-        "description": "등촌 지역 오피, 룸, 셔츠룸 등 유흥업소 상세 정보 및 리얼 후기. 브로들이 직접 경험하고 까발린 진짜 정보.",
-        "url": "https://t3b06-dc-night-rv.vercel.app/info",
-        "mainEntity": {
-            "@type": "LocalBusiness",
-            "name": "등촌 유흥 정보",
-            "areaServed": "등촌",
-            "description": "등촌 유흥 후기 정보 – 오피 룸 셔츠룸 완벽 가이드",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "서울",
-                "addressRegion": "강서구",
-                "addressCountry": "KR"
-            }
-        }
-    }
-    </script>
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="등촌 유흥 후기 – 정보: 오피 룸 셔츠룸 완벽 가이드">
-    <meta property="og:description" content="등촌 유흥 후기 정보 페이지. 오피, 룸, 셔츠룸 등 지역 유흥업소 상세 정보. 가식 없는 리얼 정보, 등촌에서 놀려면 이거 보고 가라.">
-    <meta property="og:url" content="https://t3b06-dc-night-rv.vercel.app/info">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="등촌 유흥 후기">
-
-    <style>
-        /* ----- RESET & BASE ----- */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        html {
-            font-size: 16px;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Times New Roman', Times, 'Courier New', Courier, monospace;
-            background: #1a1a1a;
-            color: #e0e0e0;
-            min-height: 100vh;
-            padding: 0 5%;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        /* ----- RAW TEXTURE (CSS-only noise) ----- */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
-            background-size: 200px 200px;
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: overlay;
-        }
-
-        /* ----- TYPOGRAPHY ----- */
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: #f2a900;
-            text-shadow: 2px 2px 0 #000;
-        }
-        h1 {
-            font-size: 2.8rem;
-            line-height: 1.1;
-            margin: 2rem 0 1.5rem;
-            word-break: keep-all;
-        }
-        h2 {
-            font-size: 2rem;
-            margin: 3rem 0 1rem;
-            border-bottom: 3px solid #f2a900;
-            padding-bottom: 0.5rem;
-        }
-        h3 {
-            font-size: 1.4rem;
-            margin: 1.5rem 0 0.75rem;
-        }
-        p, li {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: #cccccc;
-        }
-        a {
-            color: #f2a900;
-            text-decoration: underline wavy #f2a900;
-            transition: all 0.2s;
-        }
-        a:hover {
-            color: #fff;
-            text-decoration: underline wavy #fff;
-        }
-        strong {
-            color: #f2a900;
-            font-weight: 700;
-        }
-
-        /* ----- LAYOUT (Brutalist Grid) ----- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 0 4rem;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-            border-bottom: 3px solid #f2a900;
-        }
-        .logo a {
-            font-size: 1.8rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            color: #f2a900;
-            text-decoration: none;
-            text-shadow: 3px 3px 0 #000;
-            letter-spacing: 0.2em;
-        }
-        .logo a:hover {
-            color: #fff;
-        }
-
-        /* ----- NAVIGATION (hamburger) ----- */
-        .nav {
-            display: flex;
-            gap: 1.8rem;
-            align-items: center;
-        }
-        .nav a {
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #e0e0e0;
-            padding: 0.25rem 0.5rem;
-            border: 2px solid transparent;
-            transition: all 0.25s;
-        }
-        .nav a:hover,
-        .nav a.active {
-            color: #f2a900;
-            border-color: #f2a900;
-            background: rgba(242, 169, 0, 0.1);
-        }
-        .nav a.active {
-            background: rgba(242, 169, 0, 0.25);
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: 2px solid #f2a900;
-            padding: 6px 10px;
-        }
-        .hamburger span {
-            display: block;
-            width: 28px;
-            height: 3px;
-            background: #f2a900;
-            transition: all 0.3s;
-        }
-
-        /* ----- CARDS / SECTIONS ----- */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .card {
-            background: #2a2a2a;
-            border: 3px solid #444;
-            padding: 1.5rem;
-            transition: border-color 0.2s, transform 0.2s;
-        }
-        .card:hover {
-            border-color: #f2a900;
-            transform: translateY(-4px);
-        }
-        .card h3 {
-            margin-top: 0;
-        }
-        .card ul {
-            list-style: square inside;
-            padding-left: 0;
-        }
-        .card li {
-            margin: 0.5rem 0;
-        }
-
-        /* ----- FAQ (accordion style) ----- */
-        .faq-item {
-            margin: 1rem 0;
-            border: 1px solid #444;
-            background: #222;
-        }
-        .faq-question {
-            display: block;
-            padding: 1rem;
-            background: #2a2a2a;
-            font-weight: 700;
-            text-transform: uppercase;
-            cursor: pointer;
-            border: none;
-            width: 100%;
-            text-align: left;
-            font-size: 1.1rem;
-            color: #f2a900;
-        }
-        .faq-question:focus,
-        .faq-question:hover {
-            background: #333;
-        }
-        .faq-answer {
-            padding: 1rem;
-            border-top: 1px solid #f2a900;
-        }
-
-        /* ----- TEL LINK ----- */
-        .tel-link {
-            display: inline-block;
-            font-size: 1.3rem;
-            font-weight: 900;
-            color: #fff;
-            background: #f2a900;
-            padding: 0.5rem 1.5rem;
-            text-decoration: none;
-            border: 3px solid #000;
-            box-shadow: 4px 4px 0 #000;
-            transition: all 0.15s;
-        }
-        .tel-link:hover {
-            background: #000;
-            color: #f2a900;
-            border-color: #f2a900;
-            box-shadow: 4px 4px 0 #f2a900;
-        }
-
-        /* ----- FOOTER ----- */
-        .footer {
-            border-top: 3px solid #f2a900;
-            padding: 2rem 0;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        /* ----- RESPONSIVE (768px) ----- */
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.5rem; }
-            body { padding: 0 3%; }
-            .header {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
-            .nav {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                gap: 0.5rem;
-                padding: 1rem 0;
-                background: #1a1a1a;
-                border-top: 2px solid #f2a900;
-            }
-            .nav.open {
-                display: flex;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ----- HAMBURGER ACTIVE STATE ----- */
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(6px, -6px);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>등촌 유흥 정보 – 현장 방문 전 꼭 확인해야 할 체크리스트</title>
+  <meta name="description" content="등촌 유흥 장소를 선택하기 앞서 검토해야 할 주요 항목과 상황별 적합성을 상세히 안내합니다. 현장 방문 전 반드시 확인하세요.">
+  <meta name="keywords" content="등촌, 유흥, 등촌 유흥 후기, 유흥 정보, 현장 확인, 조건별 추천">
+  <link rel="canonical" href="https://deungchon-shirt-review.link-hub.org/about.html">
+  <meta property="og:title" content="등촌 유흥 후기 — 방문 전 확인해야 할 핵심 체크리스트">
+  <meta property="og:description" content="등촌 유흥 장소를 선택하기 앞서 검토해야 할 주요 항목과 상황별 적합성을 상세히 안내합니다.">
+  <meta property="og:url" content="https://deungchon-shirt-review.link-hub.org/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://deungchon-shirt-review.link-hub.org/og-image.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <!-- 기본 폰트 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Noto+Sans+KR:wght@300;400;500&display=swap');
+    body{font-family:'Noto Sans KR',sans-serif;margin:0;padding:0;background:#111;color:#eee;}
+    h1,h2{font-family:'Barlow Condensed',sans-serif;color:#fff;}
+    body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#222 25%,transparent 25%) -50px 0,
+                linear-gradient(225deg,#222 25%,transparent 25%) -50px 0,
+                linear-gradient(315deg,#222 25%,transparent 25%),
+                linear-gradient(45deg,#222 25%,transparent 25%);background-size:100px 100px;opacity:.3;z-index:-1;}
+    .r-ico-1vem{display:inline-block;width:24px;height:24px;background:url('icon.svg') no-repeat center;}
+    .n-nav-udpa{background:#222;padding:10px;}
+    .n-nav-udpa ul{list-style:none;display:flex;gap:15px;margin:0;padding:0;}
+    .n-nav-udpa li{margin:0;}
+    .n-nav-udpa a{color:#ddd;text-decoration:none;font-weight:500;}
+    .n-nav-udpa a:hover{color:#fff;}
+    @media (max-width:768px){.n-nav-udpa ul{flex-direction:column;}}
+  </style>
 </head>
 <body>
+  <!-- 네비게이션 -->
+  <nav class="n-nav-udpa">
+    <ul>
+      <li><a href="/overview">개요</a></li>
+      <li><a href="/info">정보</a></li>
+      <li><a href="/map">지도</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/contact">연락처</a></li>
+    </ul>
+  </nav>
 
-    <div class="container">
+  <main class="r-ico-1vem">
+    <section>
+      <h1>등촌 유흥 장소 선정 체크포인트</h1>
+      <p>등촌은 서울 서쪽에 위치한 동네로, 다양한 연령층이 찾는 유흥 공간이 고르게 분포돼 있습니다. 하지만 같은 구역이라 하더라도 분위기, 서비스, 접근성 등에 따라 체험이 크게 달라지기 때문에, 방문 전 반드시 확인해야 할 기본 항목을 정리했습니다.</p>
+      <p>첫 번째는 <strong>영업시간</strong>과 <strong>예약 여부</strong>입니다. 대부분의 바와 클럽은 평일과 주말에 영업시간이 다르며, 사전 예약이 필요한 경우도 있습니다. 특히 인기 있는 라운지는 예약 없이 방문하면 입장이 제한될 수 있으니, 전화 혹은 온라인 예약 시스템을 미리 확인하는 것이 현명합니다.</p>
+    </section>
 
-        <!-- HEADER -->
-        <header class="header">
-            <div class="logo">
-                <a href="/">등촌 유흥 후기</a>
-            </div>
-            <nav class="nav" id="main-nav">
-                <a href="/">홈</a>
-                <a href="/info" class="active">정보</a>
-                <a href="/reviews">후기</a>
-                <a href="/reviews">리뷰</a>
-                <a href="/contact">연락처</a>
-            </nav>
-            <button class="hamburger" id="hamburger-btn" aria-label="메뉴 열기">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </header>
+    <section>
+      <h2>인원·시점·목적별 맞춤 팁</h2>
+      <p><strong>인원 규모</strong>에 따라 선택이 달라집니다. 2~4인 소규모 모임이라면 조용하고 분위기 좋은 ‘라운지 바’를, 5인 이상 단체라면 넓은 ‘프라이빗 룸’이나 ‘대형 클럽’을 고려하세요. 각 장소마다 최소 인원 요금이 다르므로, 사전에 확인해 불필요한 비용을 방지할 수 있습니다.</p>
+      <p>시간대별로는 <strong>저녁 7시~9시</strong>가 일반적인 식음료 이용 피크이며, <strong>밤 10시 이후</strong>는 클럽과 댄스 플로어가 활발해지는 시점입니다. 이때는 음악 소음과 인파가 급증하니, 소음에 민감하다면 앞서 언급한 라운지 바를 선택하는 것이 좋습니다.</p>
+      <p>마지막으로 <strong>목적</strong>을 명확히 해야 합니다. 회식·비즈니스 목적이라면 깨끗한 위생 관리와 서비스가 강조되는 고급 라운지를, 친목·친구와의 자유로운 파티라면 분위기와 DJ 플레이리스트가 중요한 클럽을 선택하세요.</p>
+    </section>
 
-        <!-- MAIN CONTENT -->
-        <main
+    <section>
+      <h2>교통·주차·안전 체크리스트</h2>
+      <p>등촌은 지하철 2호선 ‘당산역’과 6호선 ‘합정역’ 사이에 위치해 있어 대중교통 이용이 편리합니다. 가장 가까운 버스 정류장은 ‘등촌역 앞’이며, 주요 노선이 761, 761A, 761B를 포함합니다. 늦은 시간에 대중교통이 끊기면 택시 이용이 필요하니, 미리 요금과 대기 시간을 확인해 두세요.</p>
+      <p>자차 이용 시 <strong>주차 가능 여부</strong>를 확인하는 것이 중요합니다. 일부 클럽은 자체 주차장을 운영하지만, 주변 골목길에 불법 주차 금지 표지판이 많아 주차 위반 티켓을 받을 위험이 있습니다. 가능한 경우 대형 주차장이나 공영주차장을 이용하고, 주차비를 미리 계산해 두면 예산 관리에 도움이 됩니다.</p>
+      <p>안전 측면에서는 <strong>보안 시스템</strong>과 <strong>출입 관리</strong>를 확인하세요. CCTV가 설치된 장소인지, 출입구에 보안 요원이 있는지 여부는 사고 예방에 큰 역할을 합니다. 또한, 알코올 과다 섭취 시 발생할 수 있는 위험 상황을 대비해 가까운 병원이나 119 연락처를 미리 메모해 두는 것이 현명합니다.</p>
+    </section>
+
+    <section>
+      <h2>서비스·가격·특징 별 상세 안내</h2>
+      <p>각 유흥 시설은 제공하는 서비스와 가격 구조가 다릅니다. ‘칵테일 바’는 베이스가 되는 기본 주류가 8,000원~12,000원 사이이며, 시그니처 칵테일은 15,000원에서 20,000원 정도입니다. ‘노래방’은 시간당 10,000원~15,000원이며, 추가 음료는 별도 청구됩니다. ‘클럽’은 입장료가 20,000원~30,000원이며, 드링크 패키지를 구매하면 추가 할인 혜택을 받을 수 있습니다.</p>
+      <p>특히 등촌에는 ‘테마 파티’가 자주 열리는 장소가 있습니다. 예를 들어 ‘레트로 디스코 나이트’는 복고풍 음악과 조명을 강조하고, ‘헬스턴 파이브’는 피트니스 테마의 칵테일을 제공해 색다른 경험을 선사합니다. 이런 이벤트는 사전 예약이 필수이므로, 공식 SNS나 홈페이지를 통해 일정과 예약 절차를 확인하시기 바랍니다.</p>
+    </section>
+
+    <section>
+      <h2>FAQ</h2>
+      <h3>Q1. 등촌에서 주류 판매가 가능한 시간은 언제인가요?</h3>
+      <p>A1. 대부분의 바와 클럽은 오후 5시부터 새벽 2시까지 영업합니다. 다만, 일부 펍은 24시간 운영이 가능하므로 개별 매장의 영업시간을 사전에 확인하는 것이 안전합니다.</p>
+      <h3>Q2. 단체 모임 시 최소 인원 요금이 있나요?</h3>
+      <p>A2. 네, 라운지 바와 프라이빗 룸은 최소 5인~10인 기준으로 인원당 5,000원~10,000원의 추가 요금이 부과될 수 있습니다. 예약 시 인원과 함께 요금 정책을 문의하시기 바랍니다.</p>
+      <h3>Q3. 알코올이 없는 음료도 제공하나요?</h3>
+      <p>A3. 대부분의 장소에서 무알코올 칵테일, 소다, 주스 등을 별도 메뉴로 운영하고 있습니다. 특히 가족 동반 고객을 위한 ‘키즈존’이 있는 곳에서는 어린이용 음료도 준비되어 있습니다.</p>
+    </section>
+  </main>
 </body>
 </html>
